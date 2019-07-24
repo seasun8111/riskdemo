@@ -18,8 +18,8 @@ import java.util.*;
 public class RequestDemo {
 
     /** 机构请求地址 */
-    public static final String URL = "http://127.0.0.1:8888/beichen/pushreport/1/1";
-//    public static final String URL = "https://uat.crepolaris.com:1443/beichen/pushreport/1/1";
+//    public static final String URL = "http://127.0.0.1:8888/beichen/pushreport/1/1";
+    public static final String URL = "https://uat.crepolaris.com:1443/beichen/pushreport/1/1";
 //    public static final String URL = "http://apiprod.crepolaris.com:8080/beichen/pushreport/1/1";
 
     private static final String BOUNDARY = "-------";
@@ -64,12 +64,27 @@ public class RequestDemo {
     public static final String ELEMENTS3 = "C7Q6T5v2OYrVCK515SU6Lkd/25mnn8afPP82SU8FUQ2mDd7xxZFop/UT1UVSHXaT2YNcxycOIE22yDbIvSdb0A==";
 
 
+
+
     /**
      * 测试Demo
      * @param args
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
+        TestDemo demo = new TestDemo();
+        demo.testDemo();
+        Thread.sleep(5000);
+    }
+
+
+
+    /**
+     * 测试Demo
+     * @param args
+     * @throws Exception
+     */
+    /*public static void main(String[] args) throws Exception {
         String filesDirS = "/Users/haiyangluan/Downloads/file";
         File filesDir = new File(filesDirS);
         File[] dirList = filesDir.listFiles();
@@ -79,7 +94,7 @@ public class RequestDemo {
             demo.testDemo();
             Thread.sleep(5000);
         }
-    }
+    }*/
 
 
 

@@ -101,11 +101,7 @@ public class TestDemo {
         ZipFile zipFile = fileToZip(file,KEY);
 
         String aesKey = RSACoderUtil.decryptAesKey(RequestDemo.AES_KEY, RequestDemo.PUBLIC_KEY);
-        zipFile.setComment( AesECBUtil.encrypt(JSON.toJSONString(commentDTO), aesKey  ) );
-//        zipFile.setComment( JSON.toJSONString(commentDTO)   );
-
-
-
+        zipFile.setComment( AesECBUtil.encrypt(JSON.toJSONString(commentDTO), aesKey) );
 
         /**
          * 接口传参
@@ -122,10 +118,6 @@ public class TestDemo {
         fileMap.put("zipFile",zipFile);
 
         ZipFile zipFile2 = new ZipFile("/Users/haiyangluan/Downloads/file/0aba72870b344ca7f71a11a9cd81b5a1/"+fileName+".zip");
-
-        System.out.println(zipFile2.getComment());
-
-
 
         /**
          *  发送请求，获取到蜂顺返回结果并解析
